@@ -1,3 +1,8 @@
+# This script downloads and tidies the data set from
+# https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+# and creates a new data set containing averages per subject and activity for certain
+# features. Please refer to README.md for more information about this script.
+
 library(dplyr)
 library(reshape2)
 
@@ -71,7 +76,7 @@ tidy_set <- function(setname) {
     # Now combine the columns of the subject, y and X data frames 
     # into a single data frame, and return that new data frame.
     cbind(subject, y, X)
-
+    
 }
 
 # Read the data sets for training and testing observations.

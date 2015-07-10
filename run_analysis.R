@@ -1,22 +1,24 @@
-# This script downloads and tidies the data set from
-# https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
-# and creates a new data set containing averages per subject and activity for certain
-# features. Please refer to README.md for more information about this script.
+# This script downloads and tidies the data set from the url contained in download_url
+# (defined below) and creates a new data set containing averages per subject and
+# activity for certain features. Please refer to README.md for more information about
+# this script.
 
 library(dplyr)
 library(reshape2)
 
-# The name of the zipfile we're working with and the
-# directory we're extracing the dataset to.
+# These variables should usually be okay. If on Windows you might need to change
+# download_method.
+download_url <- 'https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip'
+download_method <- 'curl'
 directory_name <- 'getdata_projectfiles_UCI_HAR_dataset'
 zipfile_name <- paste(directory_name, 'zip', sep='.')
 
 # Download and extract the data set.
 if (!file.exists(zipfile_name)) {
     download.file(
-        url='https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip',
+        url=download_url,
         dest=zipfile_name,
-        method='curl'
+        method=download_method
     )
 }
 unzip(zipfile_name, exdir=directory_name)

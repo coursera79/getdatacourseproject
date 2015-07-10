@@ -63,7 +63,7 @@ also introduce NAs and make the data less tidy.
 The textfile created by the run_analysis.R file can be read back in and viewed from R Studio with the 
 following code adapted from [2]:
 
-    data <- read.table('averages_per_subject_and_activity.txt', header = TRUE)
+    data <- read.table('averages_by_subject_and_activity.txt', header = TRUE)
     View(data)
 
 ## References

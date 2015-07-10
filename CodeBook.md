@@ -32,18 +32,19 @@ experiment.
 
 # List of variables
 
-| VARIABLE NAME         | VARIABLE                                  | VALUES/EXPLANATION        |
-|-----------------------|:-----------------------------------------:|---------------------------|  
-| subject               | The subject from whom the measurement     | numeric, range 1 to 30    |
-|                       | was taken.                                |                           |
-|                       |                                           |                           | 
-| activity              | The activity that was performed by the    | factor with levels:       |
-|                       | subject for the measurements.             |    1: walking             |
-|                       |                                           |    2: walking upstairs    |
-|                       |                                           |    3: walking downstairs  |
-|                       |                                           |    4: sitting             |
-|                       |                                           |    5: standing            |
-|                       |                                           |    6: laying              |
+<pre>
+VARIABLE NAME           VARIABLE                                VALUES/EXPLANATION
+
+subject                 The subject from whom the measurement   numeric, range 1 to 30
+                        was taken.
+
+activity                The activity that was performed by the  factor with levels:
+                        subject for the measurements.           1: walking
+                                                                2: walking upstairs
+                                                                3: walking downstairs
+                                                                4: sitting
+                                                                5: standing
+                                                                6: laying
 
 tBodyAcc.mean.X         Average for this subject and activity   numeric, range -1 to 1
 tBodyAcc.mean.Y         of the mean of the tBodyAcc feature,
@@ -190,7 +191,7 @@ fBodyBodyGyroJerkMag.std    Average for this subject and        numeric, range -
                             activity of the standard deviation
                             of the fBodyBodyGyroJerkMag
                             feature.
-                            
+</pre>                            
 
 
 = Raw data description

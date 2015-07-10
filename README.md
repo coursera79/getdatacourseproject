@@ -19,30 +19,29 @@ processed.
 
 ## Processing the data
 
-The run_analysis.R script included in this project produces a does the following things:
+The run_analysis.R script included in this project is used to create the requested data set. It requires
+no parameters or special settings. It will create a directory getdata_projectfiles_UCI_HAR_dataset and 
+download the datafile as getdata_projectfiles_UCI_HAR_dataset.zip if the file is not yet present. If an existing file with this name is present that file will be used instead of downloading a new one.
 
-1. If the ZIP file has not yet been downloaded to the current work directory, it downloads it from the 
-URL mentioned before.
+After downloading the ZIP files, the following steps are taken to process the data:
 
-2. The ZIP file is unpacked to a sub directory for processing.
-
-3. The full dataset actually contains two sets, a training set (called 'train') and a testing set 
+1. The full dataset actually contains two sets, a training set (called 'train') and a testing set 
 (called 'test'). Both sets are divided among a number of files with names ending in _X.txt, _y.txt and 
 _subject.txt. The analysis script function combines data from these different files and adds 
 descriptive column names and factor levels.
 
-4. The datasets 'train' and 'test' are combined by combining the rows (both datasets have identical 
+2. The datasets 'train' and 'test' are combined by combining the rows (both datasets have identical 
 variables).
 
-5. We then create a new tidy dataset from the data that is produced by step 4, starting by selecting 
+3. We then create a new tidy dataset from the data that is produced by step 4, starting by selecting 
 the 'subject' and 'activity' columns, as well as as well as any column which contains a mean or 
 standard deviation.
 
-6. From the data set produced in step 5 we create a new data set in which the average value for each of
+4. From the data set produced in step 5 we create a new data set in which the average value for each of
 the selected variables is contained for every combination of subject and activity that was in the data 
 set.
 
-7. The data set produced in step 6 is put in a data frame called 'averages_per_subject_and_activity' 
+5. The data set produced in step 6 is put in a data frame called 'averages_per_subject_and_activity' 
 and written to a file 'averages_per_subject_and_activity'.
 
 ## Resulting tidy data set
@@ -50,7 +49,8 @@ and written to a file 'averages_per_subject_and_activity'.
 The resulting data set contains 180 observations (for 30 subjects and 6 activities) with 68 columns per
 observation. Two of these columns are the subject and the activity, and the remaining 66 columns are 
 the average per subject and activity of the mean and standard deviation of each feature as calculated 
-in the original experiment [1].
+in the original experiment [1]. Please refer to the code book in CodeBook.md for more information about 
+the variables in this dataset.
 
 The variables from the original experiment are contained in columns in which the names correspond to the
 original name of the variable. Some variables contain an X, Y, and Z component for threedimensional 

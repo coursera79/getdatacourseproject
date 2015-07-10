@@ -21,7 +21,7 @@ experiment.
 <pre>
 VARIABLE NAME           VARIABLE                                VALUES/EXPLANATION
 
-subject                 The subject from whom the measurement   numeric, range 1 to 30
+subject                 The subject from whom the measurement   numeric, range 1 to 30 (int)
                         was taken.
 
 activity                The activity that was performed by the  factor with levels:
@@ -83,7 +83,7 @@ fBodyAccJerk.mean.Z     feature, with a separate column per
                         dimension.
                         
 fBodyGyro.mean.X        Average for this subject and activity   numeric, range -1 to 1
-fBodyGyro.mean.Y        of the mean of the fBodyGuro feature,   
+fBodyGyro.mean.Y        of the mean of the fBodyGyro feature,   
 fBodyGyro.mean.Z        with a separate column per dimension.
 
 fBodyAccMag.mean        Average for this subject and activity   numeric, range -1 to 1
@@ -94,12 +94,12 @@ fBodyBodyAccJerkMag.mean    Average for this subject and        numeric, range -
                             fBodyBodyAccJerkMag feature.
 
 fBodyBodyGyroMag.mean   Average for this subject and activity   numeric, range -1 to 1
-                        of the mean of the fBodyBodyGuroMag
+                        of the mean of the fBodyBodyGyroMag
                         feature.
                         
 fBodyBodyGyroJerkMag.mean   Average for this subject and        numeric, range -1 to 1
                             activity of the mean of the
-                            fBodyBodyGuroJerkMag feature.
+                            fBodyBodyGyroJerkMag feature.
 
 tBodyAcc.std.X          Average for this subject and activity   numeric, range -1 to 1
 tBodyAcc.std.Y          of the standard deviation of the
@@ -118,7 +118,7 @@ tBodyAccJerk.std.Z      tBodyAccJerk feature, with a separate
 
 tBodyGyro.std.X         Average for this subject and activity   numeric, range -1 to 1
 tBodyGyro.std.Y         of the standard deviation of the
-tBodyGyro.std.Z         tBodyGuro feature, with a separate
+tBodyGyro.std.Z         tBodyGyro feature, with a separate
                         column per dimension.
 
 tBodyGyroJerk.std.X     Average for this subject and activity   numeric, range -1 to 1
@@ -140,11 +140,11 @@ tBodyAccJerkMag.std     Average for this subject and activity   numeric, range -
                         
 tBodyGyroMag.std        Average for this subject and activity   numeric, range -1 to 1
                         of the standard deviation of the
-                        tBodyGuroMag feature.
+                        tBodyGyroMag feature.
                         
 tBodyGyroJerkMag.std    Average for this subject and activity   numeric, range -1 to 1
                         of the standard deviation of the
-                        tBodyGuroJerkMag feature.
+                        tBodyGyroJerkMag feature.
 
 fBodyAcc.std.X          Average for this subject and activity   numeric, range -1 to 1
 fBodyAcc.std.Y          of the standard deviation of the
@@ -158,7 +158,7 @@ fBodyAccJerk.std.Z      fBodyAccJerk feature, with a separate
 
 fBodyGyro.std.X         Average for this subject and activity   numeric, range -1 to 1
 fBodyGyro.std.Y         of the standard deviation of the
-fBodyGyro.std.Z         fBodyGuro feature, with a separate
+fBodyGyro.std.Z         fBodyGyro feature, with a separate
                         column per dimension.
 
 fBodyAccMag.std         Average for this subject and activity   numeric, range -1 to 1

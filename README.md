@@ -68,9 +68,9 @@ following code adapted from [2]:
 
 ## References
 
-[1] Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. Human Activity 
+[1]: Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. Human Activity 
 Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. International 
 Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012
 
-[2] David Hood. David's personal course project FAQ. 
+[2]: David Hood. David's personal course project FAQ. 
 https://class.coursera.org/getdata-030/forum/thread?thread_id=37

@@ -1,7 +1,8 @@
 # Getting and Cleaning Data - Course Project
 
 This project processes raw data from the experiment described at 
-http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones [1] to create a tidy dataset containing the averages of mean and standard deviations per subject and activity.
+http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones [1] to create a tidy 
+dataset containing the averages of mean and standard deviations per subject and activity.
 
 ## Source of the data
 
@@ -17,11 +18,22 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 The data set contains a README.txt file which contains information about how the data was obtained and 
 processed.
 
+## Dependencies
+
+The run_analysis.R script loads the R modules dplyr and reshape2 to help manipulate the data. Warnings
+about the dplyr module masking objects can be ignored.
+
 ## Processing the data
 
 The run_analysis.R script included in this project is used to create the requested data set. It requires
-no parameters or special settings. It will create a directory getdata_projectfiles_UCI_HAR_dataset and 
-download the datafile as getdata_projectfiles_UCI_HAR_dataset.zip if the file is not yet present. If an existing file with this name is present that file will be used instead of downloading a new one.
+no parameters or special settings, and can simply be run with source() like this (assuming the script is 
+placed in the current work directory):
+
+    source('run_analysis.R')
+
+The script will create a directory getdata_projectfiles_UCI_HAR_dataset and download the datafile as  
+getdata_projectfiles_UCI_HAR_dataset.zip if the file is not yet present. If an existing file with this 
+name is present that file will be used instead of downloading a new one.
 
 After downloading the ZIP files, the following steps are taken to process the data:
 
